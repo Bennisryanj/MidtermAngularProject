@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FavoriteComponent } from './favorite/favorite.component';
+import { QuestionsComponent } from './questions/questions.component';
+import { AddQuestionComponent } from './add-question/add-question.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
     CounterComponent,
     FetchDataComponent,
     AddQuestionComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
