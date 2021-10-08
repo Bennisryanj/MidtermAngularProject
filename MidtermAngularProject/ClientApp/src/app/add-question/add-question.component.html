@@ -1,0 +1,14 @@
+<h2>Add Question and Answer</h2>
+
+<form>
+  <label>Input Question Id </label>
+  <input type="text" class="form-control" id="QuestionId" name="QuestionId" #QuestionId />
+
+  <label>Type Question Here: Name</label>
+  <input type="text" class="form-control" id="QuestionText" name="QuestionText" #QuestionText />
+
+  <label>Type Answer Here: Title</label>
+  <input type="text" class="form-control" id="AnswerText" name="AnswerText" #AnswerText />
+
+  <button class="btn-primary btn-primary" (click)="addQuestion(QuestionId.value, QuestionText.value, AnswerText.value)">Add Q&A</button>
+</form>

@@ -29,6 +29,8 @@ import { FavoriteComponent } from './favorite/favorite.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'favorite', component: FavoriteComponent },
+      { path: 'add-question', component: AddQuestionComponent }
+
     ])
   ],
   providers: [],
