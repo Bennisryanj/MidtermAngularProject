@@ -28,6 +28,8 @@ import { AddQuestionComponent } from './add-question/add-question.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'add-question', component: AddQuestionComponent }
+
     ])
   ],
   providers: [],
