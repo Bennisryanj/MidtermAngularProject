@@ -19,7 +19,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
     FavoriteComponent
 
   ],
