@@ -26,7 +26,9 @@ namespace MidtermAngularProject.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+
                 optionsBuilder.UseSqlServer("Server=(LocalDb)\\LocalDB;Database=StudyBuddyDB;Trusted_Connection=true;MultipleActiveResultSets=true");
+
             }
         }
 
@@ -54,11 +56,15 @@ namespace MidtermAngularProject.Models
                     .WithMany(p => p.Favorites)
                     .HasForeignKey(d => d.QuestionId)
                     .HasConstraintName("FK__Favorites__Quest__286302EC");
+                    .HasConstraintName("FK__Favorites__Quest__276EDEB3");
+
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Favorites)
                     .HasForeignKey(d => d.UserId)
+
                     .HasConstraintName("FK__Favorites__UserI__29572725");
+                    .HasConstraintName("FK__Favorites__UserI__286302EC");
             });
 
             modelBuilder.Entity<Question>(entity =>
@@ -76,6 +82,10 @@ namespace MidtermAngularProject.Models
 
             modelBuilder.Entity<User>(entity =>
             {
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+
                 entity.Property(e => e.FirstName)
                     .HasMaxLength(200)
                     .IsUnicode(false);
